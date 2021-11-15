@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 
 const ProductDetails = ({ productDetails }) => {
@@ -7,7 +7,8 @@ const ProductDetails = ({ productDetails }) => {
             <CardMedia
                 component="img"
                 alt="green iguana"
-                height="350"
+                height="500"
+                width="100%"
                 image={ productDetails?.img }
             />
             <CardContent>

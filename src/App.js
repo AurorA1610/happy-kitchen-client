@@ -9,6 +9,9 @@ import Navigation from './Pages/Shared/Navigation/Navigation';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import Register from './Pages/Login/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Pay from './Pages/Dashboard/Pay/Pay';
+import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview/AddReview';
 
 function App() {
   return (
@@ -28,6 +31,15 @@ function App() {
             </Route>
             <PrivateRoute path="/purchase/:productId">
               <Purchase></Purchase>
+            </PrivateRoute>
+            <PrivateRoute path="/pay">
+              <Pay></Pay>
+            </PrivateRoute>
+            <PrivateRoute path="/myorders">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/review">
+              <AddReview></AddReview>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import Dashboard from '../Dashboard/Dashboard';
 
 const Navigation = () => {
   const { user, logout } = useAuth();
@@ -33,12 +34,16 @@ const Navigation = () => {
               <Button color="inherit">Products</Button>
             </NavLink>
             {
-              user?.displayName ? <p style={ { borderRadius: 10, marginLeft: 70, backgroundColor: '#1ABC9C', padding: 5, display: 'inline', textDecoration: 'underlined' } }>{ user.displayName }</p> : <> </>
-            }
-            {
-                    user?.email ? 
-                    <Button color="inherit" onClick={ logout }>Log out</Button>
-                    : <NavLink style={ { textDecoration: 'none', color: 'white' } } to="/login"><Button color="inherit">Login</Button></NavLink>
+              user?.email ? 
+              <Box  sx={ { display: 'inline' } }>
+                <Dashboard></Dashboard>
+                
+                {
+                  user?.displayName ? <p style={ { borderRadius: 10, marginLeft: 70, backgroundColor: '#1ABC9C', padding: 5, display: 'inline', textDecoration: 'underlined' } }>{ user.displayName }</p> : <> </>
+                }
+                <Button color="inherit" onClick={ logout }>Log out</Button>
+              </Box>
+              : <NavLink style={ { textDecoration: 'none', color: 'white' } } to="/login"><Button color="inherit">Login</Button></NavLink>
             }
           </Box>
         </Toolbar>
