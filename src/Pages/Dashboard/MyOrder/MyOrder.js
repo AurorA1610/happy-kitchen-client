@@ -2,16 +2,10 @@ import { Button, Card, CardActions, CardContent, CardMedia, Container, Typograph
 import React from 'react';
 
 const MyOrder = ({ singleOrder, handleDelete }) => {
+
     return (
         <Container>
-            <Card sx={{ maxWidth: 700, m: 5 }}>
-                <CardMedia
-                    component="img"
-                    alt=""
-                    height="500"
-                    width="100%"
-                    image={ singleOrder?.order.img }
-                />
+            <Card sx={{ maxWidth: 900, m: 5, backgroundColor: '#D4E6F1', border: '1px solid gray' }}>
                 <CardContent>
                     <Typography sx={ { m: 1, color: '#5B2C6F'} } gutterBottom variant="h3" component="div">
                         { singleOrder?.order.name }
@@ -39,9 +33,7 @@ const MyOrder = ({ singleOrder, handleDelete }) => {
                         <span style={ { fontWeight: 'bold' } }>Quantity: </span>{ singleOrder?.order.quantity }
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button sx={ { color: '#F39C12', textDecoration: 'underline' } } onClick={ handleDelete(singleOrder?._id) }>Delete Order</Button>
-                </CardActions>
+                <Button variant="contained" sx={ { mb: 3 } } onClick={ () => handleDelete(singleOrder?._id) }>Delete Order</Button>
             </Card>
         </Container>
     );

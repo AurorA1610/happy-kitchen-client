@@ -4,6 +4,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
     return (
@@ -25,18 +27,19 @@ const Footer = () => {
                     <Typography variant="h5" component="div" sx={ { color: '#7E5109', fontWeight: 'bold', mb: 2 } }>
                         Quick Links
                     </Typography>
-                    <Typography variant="p" component="div" sx={ { mb: 2 } }>
+                    
+                    <HashLink style={ { textDecoration: 'none', color: 'black' } } to="/home#home">
                         Home
-                    </Typography>
-                    <Typography variant="p" component="div" sx={ { mb: 2 } }>
+                    </HashLink> <br />
+                    <HashLink style={ { textDecoration: 'none', color: 'black' } } to="/home#products">
                         Products
-                    </Typography>
-                    <Typography variant="p" component="div" sx={ { mb: 2 } }>
+                    </HashLink> <br />
+                    <HashLink style={ { textDecoration: 'none', color: 'black' } } to="/home#reviews">
                         Reviews
-                    </Typography>
-                    <Typography variant="p" component="div" sx={ { mb: 2 } }>
+                    </HashLink> <br />
+                    <HashLink style={ { textDecoration: 'none', color: 'black' } } to="/home#awards">
                         Why Choose Us?
-                    </Typography>
+                    </HashLink>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4}>
                     <Typography variant="h5" component="div" sx={ { color: '#7E5109', fontWeight: 'bold', mb: 2 } }>

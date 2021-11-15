@@ -10,11 +10,11 @@ const Purchase = () => {
     const { productId } = useParams(); 
     const [productDetails, setProductDetails] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${ productId }`).then(res => res.json()).then(data => setProductDetails(data));
+        fetch(`https://morning-basin-57336.herokuapp.com/products/${ productId }`).then(res => res.json()).then(data => setProductDetails(data));
     }, []);
     return (
         <Container sx={{ flexGrow: 1 }}>
-            <h1 style={ { fontFamily: 'Lucida Console' } }>Hello <span style={ { color: '#7B241C' } }>{ user.displayName }</span></h1>
+            <h1 style={ { fontFamily: 'Lucida Console' } }>Hello <span style={ { color: '#7B241C' } }>{ user.displayName }</span>!</h1>
             <h5 style={ { fontFamily: 'Lucida Console' } }>({ user.email })</h5>
             <h1 style={ { fontFamily: 'Lucida Console' } }>
                 Want to Order This Product?

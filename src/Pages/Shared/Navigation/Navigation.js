@@ -13,7 +13,7 @@ import Dashboard from '../Dashboard/Dashboard';
 const Navigation = () => {
   const { user, logout } = useAuth();
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} id="home">
       <AppBar position="static" sx={ { backgroundColor: '#F39C12 ' } }>
         <Toolbar>
           <IconButton
@@ -30,6 +30,9 @@ const Navigation = () => {
           </Typography>
           
           <Box sx={{ flexGrow: 1 }}>
+            <NavLink style={ { textDecoration: 'none', color: 'white' } } to="/home">
+              <Button color="inherit">Home</Button>
+            </NavLink>
             <NavLink style={ { textDecoration: 'none', color: 'white' } } to="/products">
               <Button color="inherit">Products</Button>
             </NavLink>
@@ -39,7 +42,7 @@ const Navigation = () => {
                 <Dashboard></Dashboard>
                 
                 {
-                  user?.displayName ? <p style={ { borderRadius: 10, marginLeft: 70, backgroundColor: '#1ABC9C', padding: 5, display: 'inline', textDecoration: 'underlined' } }>{ user.displayName }</p> : <> </>
+                  user?.displayName ? <p style={ { borderRadius: 10, backgroundColor: '#1ABC9C', padding: 5, display: 'inline', textDecoration: 'underlined' } }>{ user.displayName }</p> : <> </>
                 }
                 <Button color="inherit" onClick={ logout }>Log out</Button>
               </Box>

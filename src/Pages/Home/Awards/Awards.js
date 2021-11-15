@@ -1,11 +1,12 @@
-import { Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 
 const Awards = () => {
     return (
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 2 }} sx={ { mt: 4 } }>
+        <Container sx={ { border: 1, pt: 2, pb: 2, borderRadius: 5 }}  id="awards">
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 2 }}>
                 <Grid item xs={12} sm={12} md={5}>
-                    <img style={ { borderRadius: 15, margin: 5 } } src="https://i.ibb.co/7YktYjT/shop.jpg" alt="" /> 
+                    <img style={ { borderRadius: 15, width: '100%', height: 400 } } src="https://i.ibb.co/7YktYjT/shop.jpg" alt="" /> 
                 </Grid>
                 <Grid item xs={12} sm={12} md={7}>
                     <h1 style={ { fontFamily: 'Lucida Console', marginBottom: 10, color: '#7FB3D5' } }>Why Choose Us?</h1>
@@ -42,6 +43,7 @@ const Awards = () => {
                     </Grid>
                 </Grid>
             </Grid>
+        </Container>
     );
 };
 

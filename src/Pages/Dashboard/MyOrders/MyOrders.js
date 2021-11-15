@@ -9,7 +9,7 @@ const MyOrders = () => {
         const email = user?.email;
     
         useEffect(() => {
-            fetch(`http://localhost:5000/orders?email=${ email }`)
+            fetch(`https://morning-basin-57336.herokuapp.com/orders?email=${ email }`)
                 .then(res => res.json())
                 .then(data => {
                     setOrders(data);
@@ -20,7 +20,7 @@ const MyOrders = () => {
         const handleDelete = id => {
             const proceedToDelete = window.confirm("Are you sure if you want to cancel this booking?");
             if(proceedToDelete) {
-                fetch(`http://localhost:5000/orders/${id}`, {
+                fetch(`https://morning-basin-57336.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             }).then(res => res.json()).then(data => {
                 if(data.deletedCount > 0) {
@@ -33,7 +33,7 @@ const MyOrders = () => {
         };
     return (
         <Container>
-            <h1>Your Orders</h1>
+            <h1 style={ { fontFamily: 'Lucida Console', margin: 20, color: '#7FB3D5' } }>My Orders</h1>
             {
                 orders.map(singleOrder => <MyOrder
                     key={ singleOrder._id }

@@ -10,7 +10,7 @@ This is a niche website for utensils. React, Firebase, React-router-dom, MongoDb
 
 # Live Site
 
-[ https://travel-agency-771bc.web.app/]( https://travel-agency-771bc.web.app/)
+[ https://niche-utensils.web.app/]( https://niche-utensils.web.app/)
 
 
 # Features

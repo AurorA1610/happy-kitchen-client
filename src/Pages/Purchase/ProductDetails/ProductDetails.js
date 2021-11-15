@@ -3,14 +3,7 @@ import React from 'react';
 
 const ProductDetails = ({ productDetails }) => {
     return (
-        <Card sx={{ maxWidth: 700, m: 5 }}>
-            <CardMedia
-                component="img"
-                alt="green iguana"
-                height="500"
-                width="100%"
-                image={ productDetails?.img }
-            />
+        <Card sx={{ maxWidth: 700, backgroundColor: '#EBDEF0' }}>
             <CardContent>
                 <Typography sx={ { m: 1, color: '#5B2C6F'} } gutterBottom variant="h3" component="div">
                     { productDetails?.name }
@@ -43,6 +36,12 @@ const ProductDetails = ({ productDetails }) => {
                     { productDetails?.description }
                 </Typography>
             </CardContent>
+            <CardMedia
+                component="img"
+                alt="green iguana"
+                width="100%"
+                image={ productDetails?.img }
+            />
         </Card>
     );
 };

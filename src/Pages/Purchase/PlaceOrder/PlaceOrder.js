@@ -1,9 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import useAuth from '../../../Hooks/useAuth';
 
 const PlaceOrder = ({ productDetails, user }) => {
-    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         data.order = {
@@ -15,7 +14,7 @@ const PlaceOrder = ({ productDetails, user }) => {
             brand: productDetails?.brand,
             quantity: productDetails?.quantity
         };
-        fetch('http://localhost:5000/orders', {
+        fetch('https://morning-basin-57336.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

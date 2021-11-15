@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Product = ({ product }) => {
     const { _id, img, name, description } = product;
     return (
-        <Card sx={{ maxWidth: 500, border: '1px solid gray', m: 1 }}>
+        <Card sx={{ maxWidth: 500, border: '1px solid gray', m: 1, backgroundColor: '#D4EFDF' }}>
             <CardMedia
                 component="img"
                 alt=""
