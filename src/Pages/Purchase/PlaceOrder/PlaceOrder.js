@@ -14,6 +14,7 @@ const PlaceOrder = ({ productDetails, user }) => {
             brand: productDetails?.brand,
             quantity: productDetails?.quantity
         };
+        data.status = 'pending';
         fetch('https://morning-basin-57336.herokuapp.com/orders', {
             method: 'POST',
             headers: {

@@ -14,6 +14,7 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct/AddProduct';
+import AllOrders from './Pages/Dashboard/AllOrders/AllOrders';
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/makeadmin">
               <MakeAdmin></MakeAdmin>
+            </PrivateRoute>
+            <PrivateRoute path="/allorders">
+              <AllOrders></AllOrders>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

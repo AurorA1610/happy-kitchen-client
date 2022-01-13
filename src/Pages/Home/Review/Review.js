@@ -16,7 +16,7 @@ const Review = ({ review }) => {
                         <Grid item xs={12} sm={12} md={9} sx={ { borderLeft: 1 } }>
                             <CardContent>
                                 <Typography gutterBottom variant="h4" component="div">
-                                    " { reviewText } "
+                                    "{ reviewText }"
                                 </Typography>
                                 <hr />
                                 { detailedReview && <Typography variant="body2" color="text.secondary">
